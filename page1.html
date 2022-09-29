@@ -5,276 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
-    <style>
-        body{
-            background-image: -webkit-linear-gradient();
-        }
-        #navbar{
-            border: 0px solid red;
-            padding: 0px 50px;
-            display: flex;
-            justify-content: space-between;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
-        }
-        #logo>div:nth-child(1){
-            display: flex;
-        }
-        #logo>div:nth-child(1)>div:nth-child(1)>img{
-         width: 50px;
-        }
-        #sec{
-            display: grid;
-            grid-template-columns: repeat(8,1fr);
-            gap: 30px;
-            width: 70%;
-            display: flex;
-            align-items: center;
-            margin-left: -100px;
-            font-weight: bold;
-        }
-       
-        
-        #logo>div>div:nth-child(1){
-            width: 30%;
-
-        }
-        #logo>div>div:nth-child(2){
-            width: 70%;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 25px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #000000;
-        }
-        #logo>div:nth-child(2)>p{
-            margin-top: -5px;
-            color: #666666;
-            font-size: 13px;
-            text-align: center;
-        }
-       
-        /* #drop{
-            border: 1px solid black;
-        } */
-        /* #drop>ul{
-            background-color: midnightblue;
-        } */
-        #drop ul {
-        list-style: none;
-        position: relative;
-        margin: 0%;
-        padding: 0%;
-       float: center;
-     }
-     #drop ul a{
-        color:black;
-        text-decoration: none;
-        font-size: 15px;
-        font-weight: bold;
-        line-height: 32px;
-        padding: 0px 15px;
-        display: block;
-     }
-     #drop ul li{
-        float: center;
-        position: relative;
-        margin: 0;
-        padding: 0%;
-
-     }
-     #drop ul ul{
-        position: absolute;
-        background-color: white;
-        top: 80%;
-        left: 0%;
-        display: none;
-        /* border: 1px solid green; */
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-     }
-     #drop ul ul li{
-        float: none;
-        width: 180px;
-     }
-     
-    
-     #drop ul li:hover>ul{
-        display: block;
-      
-     }
-     #drop ul ul a:hover{
-        color: blue;
-     }
-     #drop>ul>li>a:hover{
-        color: blue;
-     }
-     #drop ul ul a{
-        color: grey;
-     }
-     #sec button{
-        /* background-color: blue; */
-      
-        /* color: white; */
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-weight: bold;
-     
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-     }
-     #btn1{
-        background-color: white;
-        color: blue;
-        border: 1px solid blue;
-     }
-     #btn2{
-        background-color:rgb(40, 40, 254);
-        color: white;
-        border: 1px solid rgb(90, 90, 252);
-     }
-     #btn1:hover{
-       cursor: pointer;
-       background-color: rgb(234, 234, 255);
-     }
-     #btn2:hover{
-       cursor: pointer;
-       background-color: rgb(10, 10, 211);
-     }
-     /* #sec{
-        border: 1px solid black;
-        
-     } */
-  
-     #sec div:hover{
-        cursor: pointer;
-        color: blue;
-         border-bottom: 2px solid blue;
-     }
-     #sec>div{
-        border: 0px solid red;
-        height: 80%;
-        display: flex;
-        align-items: center;
-        text-align: center;
-     }
-     /* #ins>div:nth-child(1)>img{
-      width: 30px;
-      
-      
-     }
-     #ins>div:nth-child(1){
-        border: 1px solid red;
-        margin-top: -15px;
-        display: flex;
-        justify-content: right;
-        align-items: baseline;
-     }
-     #ins{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(2,1fr);
-        border: 5px solid black;
-     } */
-     #navdown{
-        border: 1px solid red;
-        padding: 0px 50px;
-        display: grid;
-        grid-template-columns: 45% 10% 45%;
-     }
-     #navdown>div{
-        border: 1px solid black;
-        height: 400px;
-        margin-top: 100px;
-     }
-     #navdown>div>div{
-        border: 1px solid red;
-        width: 90%;
-        height: auto;
-        margin: auto;
-     } 
-      #navdown>div>div:nth-child(1)>div{
-        border: 1px solid green;
-        width: 50px;
-        height: 50px;
-        margin-right: 15%;
-      }
-      #navdown>div>div:nth-child(1){
-        display: flex;
-        justify-content: right;
-        /* align-items: flex-end; */
-        padding-right: 20px;
-        padding-bottom: 20px;
-        height: 100px;
-      }
-      #navdown>div:nth-child(1)>div:nth-child(2)>div{
-        border: 1px solid purple;
-        width: 90%;
-        margin: auto;
-        padding: 20px;
-      }
-    #btn3{
-        padding: 8px 18px;
-        border-radius: 5px;
-        border-color: #465Def;
-        color:white;
-        
-        background-color:#465Def;
-        font-size: 18px;
-    }
-    #btn4{
-        padding: 8px 18px;
-        border-radius: 5px;
-        border-color: #465Def;
-        color:#465Def;
-       margin-left: 15px;
-        background-color: white;
-        font-size: 18px;
-    
-    }
-    #btn3:hover{
-     cursor: pointer;
-     background-color: #2031a1;
-    }
-    #btn4:hover{
-        cursor: pointer;
-        background-color: #eceffc;
-    }
-      #slid_track{
-        width: 93%;
-       
-        border: 0px solid blue;
-        margin: auto;
-        margin-top: 50px;
-      }
-      @keyframes scroll{
-        0%{
-            transform: translateX(0);
-        }
-        80%{
-            transform: translateX(calc(-200px*4));
-        }
-      }
-      .slider{
-        height: 100px;
-        margin: auto;
-        overflow: hidden;
-        position: relative;
-        width: auto;
-
-      }
-      .slider .slider-track{
-        animation: scroll 60s linear infinite;
-        display: flex;
-        width: calc(250px*8);
-       gap: 80px;
-      }
-      .slider .slide{
-        height: 80px;
-        width: 200px;
-        
-      }
-      </style>
+    <link rel="stylesheet" href="page1.css">
      
 </head>
 <body>
@@ -315,6 +46,11 @@
             <button id="btn2">Book Demo</button>
         </div>
       </div>
+      <div id="bottomnav">
+        <div><img src="https://custpostimages.s3.ap-south-1.amazonaws.com/sb_images/whatsapp.png" alt=""></div>
+        <div contenteditable="true" id="blink1"><img src="https://custpostimages.s3.ap-south-1.amazonaws.com/11/1656651762764.jpg" alt=""></div>
+      </div>
+      
       <div id="navdown">
         
         <div>
@@ -334,7 +70,9 @@
             </div>
         </div>
         <div></div>
-        <div></div>
+        <div>
+            <img src="https://www.smatbot.com/img/home_page_banner.svg" alt="">
+        </div>
        <!-- <div>
        
        <div> <div> <img src="https://www.smatbot.com/img/Instagram/Love.svg" alt=""></div></div>
@@ -383,7 +121,125 @@
             </div>
           </div>
     </div>
-    
+    <div id="vediocontainer">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_n9Yq4ZmvDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div id="black">
+        <div>
+            <p>Easy to use</p>
+            <h1>No Code Builder</h1>
+            <div>
+                <!-- <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="0" y1="80" x2="100" y2="20" stroke="yellow" />
+                  
+                     If you do not specify the stroke
+                         color the line will not be visible --> 
+                         <img src="https://www.smatbot.com/img/Line.svg" alt="">
+                  
+            </div>
+            <p>Drag & Drop to Create a Bot with Customized Design and Flow.</p>
+        </div>
+        <div id="bll">
+            <div>
+                     <div>
+                    <!-- <input type="search" placeholder="type and ress enter"> -->
+                        <img src="https://aws1.discourse-cdn.com/business7/uploads/glideapps/original/3X/9/4/9496653f891f01ae21f89138c72322be73610751.png" alt="">
+                    </div>
+            </div>
+            <div></div>
+            <div>
+                <div>
+                    <ul>
+                        <li>
+                            Use prebuilt templates to go live in minutes</li>
+                            <li>Customize design & flow with simple clicks</li>
+                            <li>Integrate 3rd party apps Hassle-free</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div id="secbottom">
+        <div>
+            <div>
+                <h1>Hybrid (Bot+Live Agent)</h1>
+                <div>
+                  
+                             <img src="https://www.smatbot.com/img/Line.svg" alt="">
+                      
+                </div>
+               <p>Get the Most Out Of Smatbot by Simultaneously Automating & Personalizing
+                by Using a Combination of Human Agents & Bots.</p>
+            </div>
+           
+        </div>
+        <div>
+            <div><img src="https://www.smatbot.com/img/hybrid/hybrid_chat.svg" alt=""></div>
+        </div>
+     </div>
+     <div id="feature">
+        <div>
+            <div>
+                <h1>Feature Rich</h1>
+                <div> <img src="https://www.smatbot.com/img/Line.svg" alt=""></div>
+                <p>Feature RichAll the Features You Need to Take Your Business to The Next Level.</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="https://www.smatbot.com/img/features/tick-mark.svg" alt="">
+                <p>Email and Mobile OTP
+                    Validation</p>
+            </div>
+            <div>
+                <img src="https://www.smatbot.com/img/features/snowflake.svg" alt="">
+                <p>Condition-Based
+                    Conversations</p>
+            </div>
+            <div>
+                <img src="https://www.smatbot.com/img/features/email.svg" alt="">
+                <p>Automated
+                    Email Follow Ups</p>
+            </div>
+            <div>
+                <img src="https://www.smatbot.com/img/features/tick-mark.svg" alt="">
+                <p>Limitless
+                    API Integrations</p>
+            </div>
+            <div>
+                <img src="https://www.smatbot.com/img/features/padlock.svg" alt="">
+                <p>High Security with
+                    Data Masking</p>
+            </div>
+            <div>
+                <img src="https://www.smatbot.com/img/features/idea.svg" alt="">
+                <p>AI Intent-Based
+                    Chat Flows</p>
+            </div>
+            <div>
+                <img src="https://www.smatbot.com/img/features/diagram.svg" alt="">
+                <p>Real-Time
+                    Performance Analytics</p>
+            </div>
+            <div>
+                <img src="https://www.smatbot.com/img/features/translate.svg" alt="">
+                <p>Converse in
+                    50+ Languages</p>
+            </div>
+        </div>
+     </div>
+     <div id="omni">
+        <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div></div>
+     </div>
 </body>
 </html>
 <script>
