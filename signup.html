@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <form >
+        <select name="" id="plans">
+            <option value="free">Free Plan</option>
+            <option value="start">Starter Plan</option>
+            <option value="pro">Pro Plan</option>
+            <option value="ent">Enterprise Plan</option>
+        </select>
+        <label for="">Enter Email</label>
+        <input type="text" placeholder="enter email">
+        <label for="">website</label>
+        <input type="text" placeholder="website">
+        <label for="">password</label>
+        <input type="text" placeholder="Password">
+        <input type="submit">
+    </form>
+    <div id="plandisplay">
+       
+    </div>
+</body>
+</html>
+<script>
+    let plan=document.querySelector("#plandisplay").innerText
+    let abs=document.querySelector("#plans").value
+    if(abs=="start"){
+      console.log("ha teek h")
+    }
+
+</script>
