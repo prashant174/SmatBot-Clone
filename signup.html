@@ -8,31 +8,177 @@
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
-    <form >
-        <select name="" id="plans">
+    <div id="main">
+        <div>
+            <div id="logo">
+                <div><img src="https://www.smatbot.com/img/SignIn/Logo_only.svg" alt=""></div>
+                <div>
+                    <h2>SmatBot</h2>
+                </div>
+                <button>Home</button>
+            </div>
+            <form id="form">
+                <select  id="plans">
+                    <option value="">plans</option>
+                    <option value="free">Free Plan</option>
+                    <option value="start">Starter Plan</option>
+                    <option value="pro">Pro Plan</option>
+                   
+                </select>
+                <label for="">Enter Email</label>
+                <input type="text" placeholder="enter email" id="mail">
+                <label for="">website</label>
+                <input type="text" placeholder="website" id="web">
+                <label for="">password</label>
+                <input type="text" placeholder="Password" id="pass">
+                <input type="submit">
+            </form> 
+        </div>
+        <div id="plandisplay"></div>
+    </div>
+    <a href="login.html"><h1>login</h1></a>
+    <form id="form">
+        <select  id="plans">
+            <option value="">plans</option>
             <option value="free">Free Plan</option>
             <option value="start">Starter Plan</option>
             <option value="pro">Pro Plan</option>
-            <option value="ent">Enterprise Plan</option>
+           
         </select>
         <label for="">Enter Email</label>
-        <input type="text" placeholder="enter email">
+        <input type="text" placeholder="enter email" id="mail">
         <label for="">website</label>
-        <input type="text" placeholder="website">
+        <input type="text" placeholder="website" id="web">
         <label for="">password</label>
-        <input type="text" placeholder="Password">
+        <input type="text" placeholder="Password" id="pass">
         <input type="submit">
     </form>
-    <div id="plandisplay">
-       
-    </div>
+   <div ></div>
 </body>
 </html>
 <script>
-    let plan=document.querySelector("#plandisplay").innerText
-    let abs=document.querySelector("#plans").value
-    if(abs=="start"){
-      console.log("ha teek h")
+    let plan=document.querySelector("#plandisplay")
+    let abs=document.querySelector("#plans")
+    let obj=[{
+        a:"Free Plan includes",
+        b:"1 Chatbot",
+        c:"50 Chats Per Month",
+        d:"Lead Generation Bot",
+        e:"Logical Brancing",
+        f:"URL based flow",
+        g:"Text-To-Speech",
+        h:"ccess bot through link",
+        i:"Email Notification"
+    }]
+    let obj2=[{
+        a:"Starter Plan includes",
+        b:"5 Chatbots",
+        c:"1000 Chats Per Month",
+        d:"Lead Generation Bot",
+        e:"Logical Branching",
+        f:"URL based flow",
+        g:"Text-To-Speech",
+        h:"Access bot through link",
+        i:"Email Notification"
+    }]
+    // dis(obj)
+    let obj3=[{
+        a:"Pro Plan includes",
+        b:"10 Chatbots",
+        c:"5000 chats per month",
+        d:"Facebook Messenger",
+        e:"Live Agent (1 Agent)",
+        f:"Google Sheets Intergation",
+        g:"Appointment Booking",
+        h:"Multi Language Support",
+        i:"Dynamic Response" 
+    }]
+    function dis(res){
+        //  document.querySelector("plandisplay").innerHTML=""
+        res.forEach(function(el){
+            let d=document.createElement("div")
+        let ha=document.createElement("h3")
+        ha.innerText=el.a
+        let hb=document.createElement("p")
+        hb.innerText=el.b
+        let hc=document.createElement("p")
+        hc.innerText=el.c
+        let hd=document.createElement("p")
+        hd.innerText=el.d
+        let he=document.createElement("p")
+        he.innerText=el.e
+        let hf=document.createElement("p")
+        hf.innerText=el.f
+        let hg=document.createElement("p")
+        hg.innerText=el.g
+        let hh=document.createElement("p")
+        hh.innerText=el.h
+        let hi=document.createElement("p")
+        hi.innerText=el.i
+        d.append(ha,hb,hc,hd,he,hf,hg,hh,hi)
+        document.querySelector("#plandisplay").append(d)
+    })
     }
+    function disp(res){
+        // document.querySelector("plandisplay").innerHTML=""
+        res.forEach(function(el){
+            let d=document.createElement("div")
+        let ha=document.createElement("h2")
+        ha.innerText=el.d
+        let hb=document.createElement("h2")
+        hb.innerText=el.e
+        let hc=document.createElement("h2")
+        hc.innerText=el.f
+        let hg=document.createElement("h2")
+        hg.innerText=el.g
+        d.append(ha,hb,hc,hg)
+        document.querySelector("#plandisplay").append(d)
+    })
+    }
+   
+    abs.addEventListener("change",function(){
+       
+        console.log("ha sab bdiya h")
+        if(abs.value==""){
+        plan.innerText=""
+        }
+        else if(abs.value=="free"){
+            // plan.innerText="M start hu"
+            // console.log("m pro hu")
+            dis(obj)
+        }
+       else if(abs.value=="start"){
+            // plan.innerText="M pro hu nbhai"
+            dis(obj2)
+        }
+        else if(abs.value=="pro"){
+            // plan.innerText="m ent hu"
+            dis(obj3)
+        }
+        else if(abs.value=="ent"){
 
+        }
+    })
+    // if(abs=="start"){
+    //     plan.innerText="bdiya hbhai"
+    //   console.log("ha teek h")
+    // }
+    document.querySelector("form").addEventListener("submit",loginpage)
+   let dataArr=JSON.parse(localStorage.getItem("login")) ||[]
+    function loginpage(event){
+        event.preventDefault();
+        if(form.mail.value==""||form.web.value==""||form.pass.value==""){
+            alert("Fill all Details")
+        }
+        else{
+            let data={
+                mail:document.querySelector("#mail").value,
+                web:document.querySelector("#web").value,
+                pass:document.querySelector("#pass").value
+            }
+            dataArr.push(data)
+            localStorage.setItem("login",JSON.stringify(dataArr))
+        }
+        console.log("chal rha h")
+    }
 </script>

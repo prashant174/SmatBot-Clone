@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" placeholder="enter email" id="mailw">
+        <input type="password" placeholder="enter password" id="passw">
+        <input type="submit">
+        <input type="checkbox">
+        <label for="logCheck"></label>
+    </form>
+    <a href="signup.html"><h1>signup</h1></a>
+</body>
+</html>
+<script>
+    let persondata=JSON.parse(localStorage.getItem("login"))
+   
+    // dis(persondata)
+
+    // function dis(res){
+    //     res.forEach(function(el){
+    //         document.querySelector("form").addEventListener("submit",function(){
+    //             log()
+    //         })
+        
+    //     })
+    // }
+    // function log(event){
+    //     event.preventDefault();
+
+    //     console.log("teek h")
+    // }
+
+   document.querySelector("form").addEventListener("submit",log)
+   function log(event){
+   event.preventDefault();
+   persondata.forEach(function(el){
+    let em=document.querySelector("#mailw").value;
+    let pw=document.querySelector("#passw").value;
+       if(em==el.mail&&pw==el.pass){
+        console.log("bdiya h")
+        console.log("teek h")
+        alert("bdiya h")
+       }
+   })
+  
+   }
+</script>
