@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="main">
+        <div>
+            <div id="show">    <h1 id="dip"></h1></div>
+            <div id="logo">
+               <div>
+                <div>
+                    <img src="https://www.smatbot.com/img/SignIn/Logo_only.svg">
+                </div>
+                <div>
+                    <h1>SmatBot</h1>
+                </div>
+               </div>
+               <div>
+                <a href="index.html"><button>Home</button></a>
+                
+               </div>
+                
+            </div>
+            <!-- <form id="form">
+                <label for="">Email Address</label><br>
+                <input type="text" placeholder="Enter Your Business Email" id="mailw"><br>
+                
+                <label for="">Password</label><br>
+                <input type="text" placeholder="Enter Your Password" id="passw"><br>
+                <input type="submit">
+            </form>  -->
+                 <form id="form">
+        <input type="text" placeholder="enter email" id="getmail">
+        <input type="password" placeholder="enter password" id="passw">
+        <input type="submit">
+        
+    </form> 
+            <div id="sign">
+                <div><p>Don't have an account? </p></div>
+                <a href="signup.html">
+                    <div><p>Sign Up</p></div>
+                </a>
+                
+            </div>
+            
+        </div>
+        <div id="plandisplay"></div>
+    </div>
+
+
+    <!-- <form id="form">
+        <input type="text" placeholder="enter email" id="mailw">
+        <input type="password" placeholder="enter password" id="passw">
+        <input type="submit">
+        <input type="checkbox">
+        <label for="logCheck"></label>
+    </form>
+    <a href="signup.html"><h1>signup</h1></a> -->
+</body>
+</html>
+<script>
+    let persondata=JSON.parse(localStorage.getItem("login"))
+   
+    // dis(persondata)
+
+    // function dis(res){
+    //     res.forEach(function(el){
+    //         document.querySelector("form").addEventListener("submit",function(){
+    //             log()
+    //         })
+        
+    //     })
+    // }
+    // function log(event){
+    //     event.preventDefault();
+
+    //     console.log("teek h")
+    // }
+      document.querySelector("#form").addEventListener("submit",log)
+      function log(event){
+        event.preventDefault();
+        let gmail=document.querySelector("#getmail").value
+        let password=document.querySelector("#passw").value
+       
+        console.log(gmail)
+        persondata.forEach(function(el){
+            let v=document.querySelector("#dip")
+            if(gmail==el.mail&&password==el.pass){
+                console.log("mailteek h")
+                v.innerText="Login Succesfull"
+                v.style.backgroundColor="rgb(24,220,83)"
+            }
+            else{
+                v.innerText="Wrong Details"
+                v.style.backgroundColor="red"
+            }
+        })
+        console.log("teek h")
+      }
+//    document.querySelector("form").addEventListener("submit",log)
+//    function log(event){
+//    event.preventDefault();
+//    persondata.forEach(function(el){
+//     let em=document.querySelector("#mailw").value;
+//     let pw=document.querySelector("#passw").value;
+//     let v=document.querySelector("#dip")
+//        if(em==el.mail&&pw==el.pass){
+//         // console.log("bdiya h")
+//         console.log("teek h")
+//         alert("bdiya h")
+//         // v.innerText="Login SuccesFull"
+//         // v.style.backgroundColor="yellowgreen"
+
+//        }
+//        if(em==el.mail&&pw!=el.pass){
+//         v.innerText="Password Wrong"
+//         v.style.backgroundColor="red"
+
+//        }
+//        if(em!=el.mail&&pw==el.pass){
+//         v.innerText="Username Wrong"
+//         v.style.backgroundColor="red"
+
+//        }
+//        else{
+//         v.innerText="Wrong Details"
+//         v.style.backgroundColor="red"
+//        }
+//    })
+  
+//    }
+</script>

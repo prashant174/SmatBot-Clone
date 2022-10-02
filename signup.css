@@ -1,0 +1,129 @@
+*{
+    font-family: sans-serif;
+}
+#main{
+    width: 80%;
+    border: 0px solid red;
+    margin: auto;
+    height: 1000px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left: 25%;
+}
+#main>div{
+    border: 0px solid green;
+    height: 100%;
+}
+#main>div:nth-child(1){
+    border: 0px solid green;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+#main>div:nth-child(2){
+    width: 50%;
+     border: 0px solid blue;
+     height: 600px;
+     margin-top: 100px;
+     border-bottom-right-radius: 20px;
+     border-top-right-radius: 20px;
+     background-color: royalblue;
+     color: white;
+     padding-left: 20px;
+     padding: 20px;
+     padding-top: 30px;
+}
+#logo{
+    width: 500px;
+    height: 80px;
+    border: 0px solid red;
+   margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+#logo>div{
+    border: 0px solid green;
+    
+    
+}
+#logo>div:nth-child(1){
+    width: 250px;
+    display: flex;
+}
+#logo>div:nth-child(1)>div:nth-child(1){
+ width: 40%;
+}
+#logo>div:nth-child(1)>div:nth-child(1)>img{
+    width: 100%;
+    height: 100%;
+}
+#logo>div:nth-child(1)>div:nth-child(2){
+    width: 60%;
+    color: #031354;
+    display: flex;
+    align-items: center;
+    
+}
+#logo>div:nth-child(2){
+    width: 100px;
+    display: flex;
+    align-items: center;
+}
+#logo>div:nth-child(2)>button{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+a{
+    cursor: pointer;
+}
+form{
+    margin: auto;
+    margin-top: 100px;
+    border: 0px solid green;
+    width: 80%;
+    
+}
+label{
+    font-size: 15px;
+    color: #052F5F;
+    font-weight: bold;
+}
+input[type="text"],select{
+    width: 100%;
+    padding: 12px 0px;
+    border: none;
+    border-bottom: 1px solid rgb(23, 23, 23);
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+input[type="submit"]{
+    background-color: #2b619e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+
+}
+input[type="submit"]:hover{
+    background-color: #3973b6;
+}
+#sign{
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+#sign>div:nth-child(2) >p{
+    color: royalblue;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+@media all and (min-width:500px) and (max-width:770px){
+    #main{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
