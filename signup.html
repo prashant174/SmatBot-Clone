@@ -11,49 +11,49 @@
     <div id="main">
         <div>
             <div id="logo">
-                <div><img src="https://www.smatbot.com/img/SignIn/Logo_only.svg" alt=""></div>
+               <div>
                 <div>
-                    <h2>SmatBot</h2>
+                    <img src="https://www.smatbot.com/img/SignIn/Logo_only.svg">
                 </div>
-                <button>Home</button>
+                <div>
+                    <h1>SmatBot</h1>
+                </div>
+               </div>
+               <div>
+                <a href="index.html"><button>Home</button></a>
+                
+               </div>
+                
             </div>
             <form id="form">
+                <label for="">Select Plan</label><br>
                 <select  id="plans">
                     <option value="">plans</option>
                     <option value="free">Free Plan</option>
                     <option value="start">Starter Plan</option>
                     <option value="pro">Pro Plan</option>
                    
-                </select>
-                <label for="">Enter Email</label>
-                <input type="text" placeholder="enter email" id="mail">
-                <label for="">website</label>
-                <input type="text" placeholder="website" id="web">
-                <label for="">password</label>
-                <input type="text" placeholder="Password" id="pass">
+                </select><br>
+                <label for="">Email Address</label><br>
+                <input type="text" placeholder="Enter Your Business Email" id="mail"><br>
+                <label for=""> Enter Your website</label><br>
+                <input type="text" placeholder="Enter Your Website URL" id="web"><br>
+                <label for="">Password</label><br>
+                <input type="text" placeholder="Enter Your Password" id="pass"><br>
                 <input type="submit">
             </form> 
+            <div id="sign">
+                <div><p>Already have an account? </p></div>
+                <a href="login.html">
+                    <div><p>Sign In</p></div>
+                </a>
+                
+            </div>
+            
         </div>
         <div id="plandisplay"></div>
     </div>
-    <a href="login.html"><h1>login</h1></a>
-    <form id="form">
-        <select  id="plans">
-            <option value="">plans</option>
-            <option value="free">Free Plan</option>
-            <option value="start">Starter Plan</option>
-            <option value="pro">Pro Plan</option>
-           
-        </select>
-        <label for="">Enter Email</label>
-        <input type="text" placeholder="enter email" id="mail">
-        <label for="">website</label>
-        <input type="text" placeholder="website" id="web">
-        <label for="">password</label>
-        <input type="text" placeholder="Password" id="pass">
-        <input type="submit">
-    </form>
-   <div ></div>
+    
 </body>
 </html>
 <script>
@@ -138,7 +138,7 @@
    
     abs.addEventListener("change",function(){
        
-        console.log("ha sab bdiya h")
+        // console.log("ha sab bdiya h")
         if(abs.value==""){
         plan.innerText=""
         }
@@ -178,7 +178,8 @@
             }
             dataArr.push(data)
             localStorage.setItem("login",JSON.stringify(dataArr))
+            alert("SignUp Successfull")
         }
-        console.log("chal rha h")
+        // console.log("chal rha h")
     }
 </script>

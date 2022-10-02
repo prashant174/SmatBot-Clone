@@ -534,7 +534,7 @@ border-radius: 10px;
 #omni{
     width: 95%;
     margin: auto;
-    border: 1px solid black;
+    border: 0px solid black;
     height: auto;
     margin-top: 100px;
     display: grid;
@@ -542,7 +542,7 @@ border-radius: 10px;
 
 }
 #omni>div{
-    border: 1px solid green;
+    border: 0px solid green;
 }
 #omni>div:nth-child(1){
   display: grid;
@@ -551,7 +551,7 @@ border-radius: 10px;
   padding: 30px;
 }
 #omni>div:nth-child(1)>div{
-    border: 1px solid purple;
+    border: 0px solid purple;
     height: auto;
     font-family:    sans-serif;
     text-align: left;
@@ -570,17 +570,17 @@ border-radius: 10px;
     font-size: 14px;
 }
 #omni>div:nth-child(1)>div:nth-child(1)~div{
-    border: 1px solid rgb(0, 128, 66);
+    border: 0px solid rgb(0, 128, 66);
     display: flex;
 
 }
 #omni>div:nth-child(1)>div:nth-child(1)~div>div{
-    border: 2px solid yellow;
+    border: 0px solid yellow;
     
     padding: 10px 10px;
 }
 #omni>div:nth-child(1)>div:nth-child(1)~div>div:nth-child(1){
-    border: 2px solid yellow;
+    border: 0px solid yellow;
     display: flex;
     align-items: center;
     padding: 10px 10px;
@@ -597,7 +597,7 @@ align-items: center;
 justify-content: center;
 }
 #omni>div:nth-child(2)>div{
-border: 2px solid green;
+border: 0px solid green;
 height: 500px;
  width:400px;
 }
@@ -863,4 +863,44 @@ height: 500px;
 }
 #bottom>div:nth-child(2)>div:nth-child(5)>p{
     font-size: 15px;
+}
+@media all and (min-width:500px) and (max-width:770px){
+     #navbar{
+        flex-direction: row;
+     }
+     #navdown{
+        grid-template-columns: repeat(1,1fr);
+     }
+     #feature>div:nth-child(2){
+        grid-template-columns: repeat(2,1fr);
+     }
+     #feature{
+        height: auto;
+     }
+     #omni{
+        grid-template-columns: repeat(1,1fr);
+        width: 80%;
+        margin: auto;
+     }
+     #bottomnav{
+        width: 100%;
+     }
+}
+@media all and (min-width:250px) and (max-width:499px){
+    #navbar{
+        flex-direction: row;
+     }
+     #navdown{
+        grid-template-columns: repeat(1,1fr);
+     }
+     #feature>div:nth-child(2){
+        grid-template-columns: repeat(1,1fr);
+     }
+     #feature{
+        height: auto;
+     }
+     #omni{
+        grid-template-columns: repeat(1,1fr);
+        
+     }
 }

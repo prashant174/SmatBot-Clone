@@ -88,7 +88,7 @@ label{
     color: #052F5F;
     font-weight: bold;
 }
-input[type="text"],select{
+input[type="text"],input[type="password"],select{
     width: 100%;
     padding: 12px 0px;
     border: none;
@@ -121,6 +121,12 @@ input[type="submit"]:hover{
 }
 a{
     text-decoration: none;
+}
+#show{
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 @media all and (min-width:500px) and (max-width:770px){
     #main{
